@@ -53,17 +53,17 @@ because of the network problem,i can't download those files
 
 ### Step-by-step instructions
 
-####Install numpy/pytorch/opencv
+#### Install numpy/pytorch/opencv
 
 pip3 install numpy
 pip3 install pytorch
 pip3 install opencv-python
 
-####Install other requirements
+#### Install other requirements
 
 pip3 install pyyaml yacs tqdm colorama matplotlib cython tensorboardX
 
-####Build extensions
+#### Build extensions
 
 python setup.py build_ext --inplace
 
@@ -78,21 +78,21 @@ python3 setup.py install
 
 ## How to Excute Demo
 
-###Add PySOT to your PYTHONPATH
+### Add PySOT to your PYTHONPATH
 
 export PYTHONPATH=/home/nvidia/yolo_siamrpn++:$PYTHONPATH #Your project path
 
-###Download models
+### Download models
 
 Download models in PySOT Model Zoo and put the model.pth in the correct directory in experiments.
 
-###Webcam demo
+### Webcam demo
 
-####backbone_ResNet-50
+#### backbone_ResNet-50
 
 python3 trt_demo.py --config experiments/siamrpn_r50_l234_dwxcorr/config.yaml --snapshot experiments/siamrpn_r50_l234_dwxcorr/model.pth --video_name video/2.flv
 
-####backbone_MobileNetv2
+#### backbone_MobileNetv2
 
 python3 trt_demo.py --config experiments/siamrpn_mobilev2_l234_dwxcorr/config.yaml --snapshot experiments/siamrpn_mobilev2_l234_dwxcorr/model.pth --video_name video/2.flv
 
